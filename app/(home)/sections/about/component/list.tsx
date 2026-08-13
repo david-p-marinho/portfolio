@@ -6,12 +6,12 @@ interface props {
 export default function List({title, content}: props) {
     return(
         <div>
-            <h3 className="text-center text-[20px] font-bold">{title}</h3>
+            <h3 className="text-center text-[20px] font-bold mb-5">{title}</h3>
 
             <ul className="list-disc list-inside">
                 {
-                    content.map((text) => (
-                        <li>{text}</li>
+                    content.map((text, index) => (
+                        <li key={index}>{text}</li>
                     ))
                 }
             </ul>

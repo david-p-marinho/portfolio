@@ -5,8 +5,8 @@ interface props {
 
 export default function FrameWorkCard({title, icon}: props) {
     return(
-        <div className="group  w-[45px] flex flex-col items-center">
-            <div className="w-[30px] h-[30px] flex flex-col justify-center items-center bg-[#D9D9D9] rounded-full text-black">
+        <div className="group  w-[75px] flex flex-col items-center wrap">
+            <div className="w-[40px] h-[40px] flex flex-col justify-center items-center bg-[#D9D9D9] rounded-full text-black">
                 {icon}
             </div>
             <label className="md:hidden md:group-hover:block">{title}</label>

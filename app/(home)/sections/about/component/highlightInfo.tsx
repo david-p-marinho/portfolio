@@ -4,11 +4,11 @@ import List from "./list";
 
 export default function HighLightInfo() {
     return(
-        <div className="w-full bg-[#0A2947] text-white my-5 rounded-md px-3 py-5">
+        <div className="w-full bg-[#3E65B3] text-white my-5 rounded-md px-3 py-5 my-10">
             <div className="w-full mb-15">
                 <h3 className="text-center text-[20px] font-bold">Feramentas que uso</h3>
 
-                <div className="flex justify-evenly items-center w-full">
+                <div className="flex justify-evenly items-center w-full mt-5">
                     <FrameWorkCard title={"JavaScript"} icon={<RiJavascriptLine className="w-[25px] h-[25px]" />}/>
                     <FrameWorkCard title={"React"} icon={<RiReactjsLine className="w-[25px] h-[25px]"/>}/>
                     <FrameWorkCard title={"NextJs"} icon={<RiNextjsLine className="w-[25px] h-[25px]"/>}/>
