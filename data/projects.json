@@ -1,0 +1,65 @@
+[
+    {
+        "id": 0,
+        "title": "Perclima",
+        "resume": "Sistema de CRM (Customer Relationship Management) para a empresa perclima refrigeração e seus clientes, focado em tornar mais prático e rápido a solicitação de serviços de manutenção ou instalação de ar condicionados. \n \nNo site, o cliente cria a sua conta e tem acesso ao dashboard onde pode visualizar  e adicionar suas residências, suas máquinas além de poder solicitar e acompanhar os serviços tudo dentro do sistema. \n \nPara construir esse site, foi utilizado: ReactJS com NextJS, tailwind e o firebase como banco de dados e autenticador de usuário",
+        "imgs": ["/projeto1.webp", "/project1-1.webp", "/projeto1m.webp"],
+        "tags": [
+            "Next.JS", "React", "Tailwind", "Firebase"
+        ],
+        "links": [
+            {
+                "id": 0,
+                "label": "GitHub",
+                "link": "" 
+            },
+            {
+                "id": 1,
+                "label": "LinkedIn",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "id": 1,
+        "title": "Swarm79",
+        "resume": "O website da equipe de pesquisa e competição de drone, Swarm79 foi idealizado para ser um site com uma interface moderna, que refletisse a estética da equipe. Eu fiquei na área de desenvolvimento do site, mas também ajudei a equipe de design e prototipação \n \nUm dos principais focos foi a facilidade de adicionar e editar informações. A ideia era que qualquer integrante da equipe pudesse editar facilmente os textos sem precisar de muito conhecimento em programação. Para isso, foi necessário componentizar várias áreas do site e tornar-los automatizados para se adaptarem a mudanças. \n \nO site foi desenvolvido pela equipe usando o ReactJS, NextJS e tailwind para a estilização",
+        "imgs": ["/projeto2.jpg", "/projeto2-1.jpg", "/projeto2m.jpg"],
+        "tags": [
+            "Next.JS", "React", "Tailwind"
+        ],
+        "links": [
+            {
+                "id": 0,
+                "label": "GitHub",
+                "link": "" 
+            },
+            {
+                "id": 1,
+                "label": "LinkedIn",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "title": "teste",
+        "resume": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim  veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea  commodo consequat Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim  veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea  commodo consequat",
+        "imgs": ["/projeto3.jpg", "/projeto3-1.jpg", "/projeto3m.jpg"],
+        "tags": [
+            "Next.JS", "React", "Tailwind"
+        ],
+        "links": [
+            {
+                "id": 0,
+                "label": "GitHub",
+                "link": "" 
+            },
+            {
+                "id": 1,
+                "label": "LinkedIn",
+                "link": ""
+            }
+        ]
+    }
+]
