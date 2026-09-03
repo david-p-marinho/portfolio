@@ -3,7 +3,7 @@ export default interface ProjectProps {
     title: string
     resume: string
     imgs: string[]
-    tags: string[]
+    tags: number[]
     links: Array<{
         id: number,
         label: string,

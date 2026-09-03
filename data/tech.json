@@ -1,14 +1,52 @@
 [
     {
+        "logo": "html",
         "name": "HTML",
-        "color": ""
+        "color": "#EA552A"
     },
     {
+        "logo": "css",
         "name": "css",
-        "color": ""
+        "color": "#10BAE0"
     },
     {
+        "logo": "js",
         "name": "JavaScript",
-        "color": ""
+        "color": "#D6C118"
+    },
+    {
+        "logo": "tailwind",
+        "name": "Tailwind",
+        "color": "#16B9C6"
+    },
+    {
+        "logo": "react",
+        "name": "React",
+        "color": "#10B981"
+    },
+    {
+        "logo": "reactNative",
+        "name": "React Native",
+        "color": "#14B8A6"
+    },
+    {
+        "logo": "next",
+        "name": "NextJs",
+        "color": "#000000"
+    },
+    {
+        "logo": "figma",
+        "name": "Figma",
+        "color": "#F76E5F"
+    },
+    {
+        "logo": "firebase",
+        "name": "FireBase",
+        "color": "#F76E5F"
+    },
+    {
+        "logo": "angular",
+        "name": "Angular",
+        "color": "#F76E5F"
     }
 ]

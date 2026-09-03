@@ -4,7 +4,7 @@ import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 import { useRef } from "react";
 import Hero from "./sections/hero/hero";
 import Projects from "./sections/projects/projects";
-import Tech from "./sections/tech/tech";
+import About from "./sections/about/about";
 
 export default function Home() {
     const containerRef = useRef<HTMLDivElement>(null);
@@ -44,7 +44,7 @@ export default function Home() {
             </div>
 
             <section className="h-screen w-full snap-start flex items-center justify-center bg-[#F7F4ED] text-gray-900">
-                <Tech/>
+                <About/>
             </section>
         </main>
     );

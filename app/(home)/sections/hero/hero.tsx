@@ -6,8 +6,8 @@ export default function Hero() {
     const btnStyle = "bg-[#189CC9] shadow-md px-3 py-2 rounded-full flex justify-center transition-transform duration-200 items-center text-white mx-5 group hover:shadow-xl hover:scale-105 active:scale-95"
     
     return (
-        <div className=" h-screen w-full bg-[#2a619a] flex flex-col justify-center items-center">
-            <div className="flex flex-row-reverse items-center justify-center mb-30">
+        <div className=" h-screen w-full bg-[#2a619a] flex justify-center items-center">
+            <div className="flex flex-col md:flex-row-reverse items-center justify-center mb-30">
                 <Image width={200} height={200} className="rounded-full" src={"/portrait.jpg"} alt={""}/>
                 
                 <div className="text-white flex flex-col items-center mx-5 h-[200px] justify-between">
