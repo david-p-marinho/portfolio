@@ -24,7 +24,7 @@
     {
         "id": 1,
         "title": "Swarm79",
-        "resume": "Sistema de CRM (Customer Relationship Management) para a empresa perclima refrigeração",
+        "resume": "O website da equipe de pesquisa e competição de drone, Swarm79",
         "info": "O website da equipe de pesquisa e competição de drone, Swarm79 foi idealizado para ser um site com uma interface moderna, que refletisse a estética da equipe. Eu fiquei na área de desenvolvimento do site, mas também ajudei a equipe de design e prototipação \n \nUm dos principais focos foi a facilidade de adicionar e editar informações. A ideia era que qualquer integrante da equipe pudesse editar facilmente os textos sem precisar de muito conhecimento em programação. Para isso, foi necessário componentizar várias áreas do site e tornar-los automatizados para se adaptarem a mudanças. \n \nO site foi desenvolvido pela equipe usando o ReactJS, NextJS e tailwind para a estilização",
         "imgs": ["/projeto2-1.webp", "/projeto2-1.jpg", "/projeto2m.jpg"],
         "tags": [
@@ -46,7 +46,7 @@
     {
         "id": 2,
         "title": "teste",
-        "resume": "Sistema de CRM (Customer Relationship Management) para a empresa perclima refrigeração",
+        "resume": "Um teste aleatorio. Ignora, pls",
         "info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim  veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea  commodo consequat Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim  veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea  commodo consequat",
         "imgs": ["/projeto3.jpg", "/projeto3-1.jpg", "/projeto3m.jpg"],
         "tags": [
