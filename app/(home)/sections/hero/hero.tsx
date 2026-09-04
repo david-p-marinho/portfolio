@@ -3,7 +3,7 @@ import Link from "next/link";
 import { RiGithubLine, RiLinkedinBoxLine, RiUserLine } from "react-icons/ri";
 
 export default function Hero() {
-    const btnStyle = "bg-[#189CC9] shadow-md px-3 py-2 rounded-full flex justify-center transition-transform duration-200 items-center text-white mx-5 group hover:shadow-xl hover:scale-105 active:scale-95"
+    const btnStyle = "bg-[#189CC9] shadow-md px-3 py-2 rounded-full flex justify-center transition-transform duration-200 items-center text-white mx-5 scale-75 group hover:shadow-xl hover:scale-105 active:scale-95 md:scale-100 "
     
     return (
         <div className=" md:h-screen w-full bg-gradient-to-b from-[#273070] to-[#20345C] flex justify-center items-center">
