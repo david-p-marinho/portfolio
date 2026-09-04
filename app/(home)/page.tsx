@@ -21,30 +21,36 @@ export default function Home() {
         damping: 20,
         restDelta: 0.001,
     });
-    
+
     const clipRadius = useTransform(smoothProgress, [0, 0.33], ["0%", "150%"]);
-    const clipPath = useTransform(
-        clipRadius,
-        (r) => `circle(${r} at 50% 100%)`
-    );
+
+    const clipPath = useTransform(clipRadius, (r) => {
+        if (typeof window !== "undefined" && window.innerWidth < 768) {
+            return "none";
+        }
+        return `circle(${r} at 50% 100%)`;
+    });
+
+
 
     return (
-        <main ref={containerRef} className="h-screen w-full overflow-y-scroll snap-y snap-proximity md:snap-mandatory bg-[#2a619a]">
-            <section className="h-screen w-full snap-start flex flex-col justify-center items-center">
-                <Hero/>
+        <main ref={containerRef} className=" md:h-screen w-full overflow-y-scroll snap-y snap-proximity md:snap-mandatory bg-[#2a619a]">
+            <section className="md:h-screen w-full snap-start flex flex-col justify-center items-center">
+                <Hero />
             </section>
 
-            <div ref={section2Ref} className="md:h-[200vh] w-full snap-start relative">
+            <div ref={section2Ref} className="md:h-[200vh] w-full snap-start relative rounded-lg bg-[#20345C]">
+                <div className="w-full h-10 rounded-t-lg md:hidden bg-[#F7F4ED] absolute -top-2" />
                 <motion.div
                     style={{ clipPath }}
-                    className="sticky top-0 h-screen w-full flex items-center justify-between px-12 md:px-24 overflow-hidden bg-[#F7F4ED] text-gray-800"
+                    className="sticky top-0 md:h-screen w-full flex items-center justify-between md:px-24 overflow-hidden bg-[#F7F4ED] text-gray-800"
                 >
-                    <Projects/>
+                    <Projects />
                 </motion.div>
             </div>
 
             <section className="h-screen w-full md:snap-start flex items-center justify-center bg-[#F7F4ED] text-gray-900">
-                <p>aaaaaaaaaaaa</p>
+                <About/>
             </section>
         </main>
     );

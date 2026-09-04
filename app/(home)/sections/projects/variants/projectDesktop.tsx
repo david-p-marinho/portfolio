@@ -13,7 +13,7 @@ export default function ProjectDesktop({ activeProject, techList }: { activeProj
                     <AnimatePresence mode="popLayout">
                         <motion.div key={activeProject.id} initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -10 }} transition={{ duration: 0.2 }}>
                             <h2 className="text-5xl font-bold leading-tight text-[#189CC9]">{activeProject.title}</h2>
-                            <p className="mt-4 text-gray-600 max-w-md text-lg whitespace-pre-line">{activeProject.resume}</p>
+                            <p className="mt-4 text-gray-600 max-w-lg text-md whitespace-pre-line">{activeProject.info}</p>
 
                             {
                                 techList && (

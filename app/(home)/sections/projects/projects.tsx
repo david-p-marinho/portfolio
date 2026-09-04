@@ -1,13 +1,10 @@
-import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState, useRef } from "react";
 import getProjects from "@/utils/getProjects";
 import ProjectProps from "@/types/projectProps";
-import Carousel from "./component/carousel";
-import ActionBtn from "./component/actionBtn";
 import TechProps from "@/types/techProps";
 import getTech from "@/utils/getTech";
-import Tags from "./component/tags";
 import ProjectDesktop from "./variants/projectDesktop";
+import ProjectMobile from "./variants/projectMobile";
 
 export default function Projects() {
     const [projects, setProjects] = useState<ProjectProps[]>([]);
@@ -56,18 +53,18 @@ export default function Projects() {
     const activeProject = projects[currentIndex];
 
     return (
-        <div onWheel={handleWheel} className="pr-8 flex flex-col w-full items-center h-full py-10 select-none">
+        <div onWheel={handleWheel} className="md:pr-8 flex flex-col w-full items-center h-full py-10 select-none">
             <span className="text-[#189CC9] font-mono text-sm block font-bold mb-20">01 / PORTFÓLIO</span>
             {activeProject && (
                 <>
-                <div className="hidden md:block w-full h-screen">
-                    <ProjectDesktop activeProject={activeProject} techList={techList}/>
-                </div>
+                    <div className="hidden md:block w-full h-screen">
+                        <ProjectDesktop activeProject={activeProject} techList={techList} />
+                    </div>
 
-                <div className="md:hidden">
-                    <p>teste</p>
-                </div>
-                
+                    <div className="md:hidden w-full">
+                        <ProjectMobile projectList={projects} techList={techList} />
+                    </div>
+
                 </>
             )}
         </div>
