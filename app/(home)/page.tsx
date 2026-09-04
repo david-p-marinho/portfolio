@@ -34,7 +34,7 @@ export default function Home() {
                 <Hero/>
             </section>
 
-            <div ref={section2Ref} className="h-[200vh] w-full snap-start relative">
+            <div ref={section2Ref} className="md:h-[200vh] w-full snap-start relative">
                 <motion.div
                     style={{ clipPath }}
                     className="sticky top-0 h-screen w-full flex items-center justify-between px-12 md:px-24 overflow-hidden bg-[#F7F4ED] text-gray-800"
