@@ -7,6 +7,7 @@ import ActionBtn from "./component/actionBtn";
 import TechProps from "@/types/techProps";
 import getTech from "@/utils/getTech";
 import Tags from "./component/tags";
+import ProjectDesktop from "./variants/projectDesktop";
 
 export default function Projects() {
     const [projects, setProjects] = useState<ProjectProps[]>([]);
@@ -58,49 +59,16 @@ export default function Projects() {
         <div onWheel={handleWheel} className="pr-8 flex flex-col w-full items-center h-full py-10 select-none">
             <span className="text-[#189CC9] font-mono text-sm block font-bold mb-20">01 / PORTFÓLIO</span>
             {activeProject && (
-                <div className="flex flex-col items-center w-full h-screen justify-between">
-                    <div className="flex justify-between w-full">
-                        <div className="w-1/2">
-                            <AnimatePresence mode="popLayout">
-                                <motion.div key={activeProject.id} initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -10 }} transition={{ duration: 0.2 }}>
-                                    <h2 className="text-5xl font-bold leading-tight text-[#189CC9]">{activeProject.title}</h2>
-                                    <p className="mt-4 text-gray-600 max-w-md text-lg whitespace-pre-line">{activeProject.resume}</p>
-
-                                        {
-                                            techList && (
-                                                <div className="mt-10 w-fit">
-                                                    <p className="text-center font-bold mb-5">Tecnologias usadas</p>
-                                                    <div className="flex gap-4 items-center">
-                                                        {activeProject.tags.map((number) => (
-                                                            <Tags name={techList[number].name} color={techList[number].color}/>
-                                                        ))}
-                                                    </div>
-                                                </div>
-                                            )
-
-
-                                        }
-                                </motion.div>
-                            </AnimatePresence>
-                        </div>
-
-                        <div className="w-1/2 h-[500px] overflow-hidden relative rounded-2xl">
-                            <AnimatePresence mode="popLayout">
-                                <motion.div key={activeProject.id} initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -40 }} transition={{ duration: 0.5, ease: "easeOut" }} className="absolute inset-0 h-full w-full rounded-2xl flex items-center justify-center text-2xl font-bold text-white shadow-lg">
-                                    <Carousel project={activeProject.imgs} />
-                                </motion.div>
-                            </AnimatePresence>
-                        </div>
-                    </div>
-
-                    <div className="flex gap-8 mb-10">
-                        {
-                            activeProject.links.map((item) => (
-                                <ActionBtn key={item.id} link={item.link} name={item.label} />
-                            ))
-                        }
-                    </div>
+                <>
+                <div className="hidden md:block w-full h-screen">
+                    <ProjectDesktop activeProject={activeProject} techList={techList}/>
                 </div>
+
+                <div className="md:hidden">
+                    <p>teste</p>
+                </div>
+                
+                </>
             )}
         </div>
     );

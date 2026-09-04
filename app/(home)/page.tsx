@@ -29,7 +29,7 @@ export default function Home() {
     );
 
     return (
-        <main ref={containerRef} className="h-screen w-full overflow-y-scroll snap-y snap-mandatory bg-[#2a619a]">
+        <main ref={containerRef} className="h-screen w-full overflow-y-scroll snap-y snap-proximity md:snap-mandatory bg-[#2a619a]">
             <section className="h-screen w-full snap-start flex flex-col justify-center items-center">
                 <Hero/>
             </section>
@@ -43,8 +43,8 @@ export default function Home() {
                 </motion.div>
             </div>
 
-            <section className="h-screen w-full snap-start flex items-center justify-center bg-[#F7F4ED] text-gray-900">
-                <About/>
+            <section className="h-screen w-full md:snap-start flex items-center justify-center bg-[#F7F4ED] text-gray-900">
+                <p>aaaaaaaaaaaa</p>
             </section>
         </main>
     );
