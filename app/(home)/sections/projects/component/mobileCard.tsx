@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function MobileCard({ project, techList }: { project: ProjectProps, techList: TechProps[] }) {
     return (
-        <Link href={`/projeto/${project.id}`} className="w-full h-[135px] relative px-2 py-2 bg-[#ABCDD1] rounded-md mx-2 shadow-md">
+        <Link href={`/projeto/${project.id}`} className="w-full min-w-0 h-[135px] relative px-2 py-2 bg-[#ABCDD1] rounded-md mx-2 shadow-md">
             <p className="text-center text-lg text-[#1575B0] font-bold">{project.title}</p>
             <p className="text-[12px] w-[90%]">{project.resume}</p>
             <div className="flex gap-6 w-full justify-center mt-5">
