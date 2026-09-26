@@ -20,8 +20,8 @@ export default function ProjectDesktop({ activeProject, techList }: { activeProj
                                     <div className="mt-10 w-fit">
                                         <p className="text-center font-bold mb-5">Tecnologias usadas</p>
                                         <div className="flex gap-4 items-center">
-                                            {activeProject.tags.map((number) => (
-                                                <Tags name={techList[number].name} color={techList[number].color} />
+                                            {activeProject.tags.map((number, index) => (
+                                                <Tags key={index} name={techList[number].name} color={techList[number].color} />
                                             ))}
                                         </div>
                                     </div>
@@ -45,7 +45,7 @@ export default function ProjectDesktop({ activeProject, techList }: { activeProj
             <div className="flex gap-8 mb-10">
                 {
                     activeProject.links.map((item) => (
-                        <ActionBtn key={item.id} link={item.link} name={item.label} />
+                        <ActionBtn key={item.id} link={item.link} name={item.label} iconKey={item.iconKey} />
                     ))
                 }
             </div>

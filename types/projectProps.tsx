@@ -8,6 +8,7 @@ export default interface ProjectProps {
     links: Array<{
         id: number,
         label: string,
-        link: string
+        link: string,
+        iconKey: string
     }>
 }

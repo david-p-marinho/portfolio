@@ -1,7 +1,7 @@
 'use client'
 
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import Hero from "./sections/hero/hero";
 import Projects from "./sections/projects/projects";
 import About from "./sections/about/about";
@@ -9,6 +9,12 @@ import About from "./sections/about/about";
 export default function Home() {
     const containerRef = useRef<HTMLDivElement>(null);
     const section2Ref = useRef<HTMLDivElement>(null);
+
+    const [isMounted, setIsMounted] = useState(false)
+
+    useEffect(() => {
+        setIsMounted(true)
+    }, [])
 
     const { scrollYProgress } = useScroll({
         container: containerRef,
@@ -42,7 +48,7 @@ export default function Home() {
             <div ref={section2Ref} className="md:h-[200vh] w-full snap-start relative rounded-lg bg-[#20345C]">
                 <div className="w-full h-10 rounded-t-lg md:hidden bg-[#F7F4ED] absolute -top-2" />
                 <motion.div
-                    style={{ clipPath }}
+                    style={{ clipPath: isMounted ? clipPath: undefined }}
                     className="sticky top-0 md:h-screen w-full flex items-center justify-between md:px-24 overflow-hidden bg-[#F7F4ED] text-gray-800"
                 >
                     <Projects />

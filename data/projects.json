@@ -12,12 +12,14 @@
             {
                 "id": 0,
                 "label": "Abrir repositorio",
-                "link": "https://github.com/david-p-marinho/perclima-react" 
+                "link": "https://github.com/david-p-marinho/perclima-react" ,
+                "iconKey": "github"
             },
             {
                 "id": 1,
                 "label": "Abrir site",
-                "link": "https://github.com/david-p-marinho/perclima-react"
+                "link": "https://github.com/david-p-marinho/perclima-react",
+                "iconKey": "web"
             }
         ]
     },
@@ -26,7 +28,7 @@
         "title": "Swarm79",
         "resume": "O website da equipe de pesquisa e competição de drone, Swarm79",
         "info": "O website da equipe de pesquisa e competição de drone, Swarm79 foi idealizado para ser um site com uma interface moderna, que refletisse a estética da equipe. Eu fiquei na área de desenvolvimento do site, mas também ajudei a equipe de design e prototipação \n \nUm dos principais focos foi a facilidade de adicionar e editar informações. A ideia era que qualquer integrante da equipe pudesse editar facilmente os textos sem precisar de muito conhecimento em programação. Para isso, foi necessário componentizar várias áreas do site e tornar-los automatizados para se adaptarem a mudanças. \n \nO site foi desenvolvido pela equipe usando o ReactJS, NextJS e tailwind para a estilização",
-        "imgs": ["/projeto2-1.webp", "/projeto2-1.jpg", "/projeto2m.jpg"],
+        "imgs": ["/projeto2-1.webp", "/projeto2-2.webp"],
         "tags": [
             6, 4, 3
         ],
@@ -34,35 +36,35 @@
             {
                 "id": 0,
                 "label": "Abrir repositorio",
-                "link": "https://github.com/Ojoca01/swarm_teste" 
-            },
-            {
-                "id": 1,
-                "label": "Abrir site",
-                "link": "https://github.com/Ojoca01/swarm_teste"
+                "link": "https://github.com/Ojoca01/swarm_teste",
+                "iconKey": "github"
             }
-        ]
+        ],
+        "status": 0
     },
     {
         "id": 2,
-        "title": "teste",
-        "resume": "Um teste aleatorio. Ignora, pls",
-        "info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim  veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea  commodo consequat Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim  veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea  commodo consequat",
+        "title": "JJ Energy",
+        "resume": "CRM para gerenciar clientes de uma empresa de energia solar",
+        "info": "Caso de estudo de um sistema CRM para gerenciamento de clientes de uma empresa fictícia de fornecimento de energia solar. O foco do projeto era tornar facil a identificação e alteração de informações sobre o consumo mensal dos clientes. \n \nPara isso, o APP possui sistemas de CRUD (Create, Read, Update e Delete) de clientes, de usinas e de dados de consumo. Tudo isso é integrado com o firebase permitindo o uso do app em qualquer lugar",
         "imgs": ["/projeto3.jpg", "/projeto3-1.jpg", "/projeto3m.jpg"],
         "tags": [
-            6, 4, 3
+            5, 3, 8
         ],
         "links": [
             {
                 "id": 0,
                 "label": "Abrir repositorio",
-                "link": "https://github.com/david-p-marinho/perclima-react" 
+                "link": "https://github.com/david-p-marinho/perclima-react",
+                "iconKey": "github"
             },
             {
                 "id": 1,
                 "label": "Abrir site",
-                "link": "https://github.com/david-p-marinho/perclima-react"
+                "link": "https://github.com/david-p-marinho/perclima-react",
+                "iconKey": "web"
             }
-        ]
+        ],
+        "status": 0
     }
 ]

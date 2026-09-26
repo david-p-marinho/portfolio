@@ -7,7 +7,7 @@ export default function ProjectMobile({projectList, techList}: {projectList: Pro
         <ul className="w-full">
             {
                 projectList.map((project) => (
-                    <li className="flex justify-center items-center mb-5 w-full">
+                    <li key={project.id} className="flex justify-center items-center mb-5 w-full">
                         <MobileCard project={project} techList={techList}/>
                     </li>
                 ))

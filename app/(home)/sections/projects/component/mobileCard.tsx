@@ -11,8 +11,8 @@ export default function MobileCard({ project, techList }: { project: ProjectProp
             <p className="text-[12px] w-[90%]">{project.resume}</p>
             <div className="flex gap-6 w-full justify-center mt-5">
                 <div className="flex gap-4 items-center scale-75">
-                    {project.tags.slice(0, 3).map((number) => (
-                        <Tags name={techList[number].name} color={techList[number].color} />
+                    {project.tags.slice(0, 3).map((number, index) => (
+                        <Tags key={index} name={techList[number].name} color={techList[number].color} />
                     ))}
                     {
                         project.tags.length > 3 && (
