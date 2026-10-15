@@ -4,14 +4,14 @@ import Info from "./component/info";
 
 export default function About() {
     return (
-        <div className="w-full h-screen py-10 flex flex-col items-center">
-            <span className="text-[#189CC9] font-mono text-sm block font-bold mb-20">02 / SOBRE MIM</span>
+        <div className="w-full h-screen py-10 flex flex-col items-center gap-4">
+            <span className="text-[#189CC9] font-mono text-sm block font-bold">02 / SOBRE MIM</span>
             <div className="flex w-full items-center justify-center md:justify-evenly">
                 <div className="md:flex items-center justify-center hidden">
                     <Image className="rounded-md relative -right-25 -top-25" width={240} height={365} src={"/about1.png"} alt={""} />
                     <Image className="rounded-md z-10" width={240} height={365} src={"/about2.png"} alt={""} />
                 </div>
-                <div className="w-full mx-3 md:w-[30dvw] bg-[#3E65B3] text-white px-3 py-5 rounded-md flex flex-col items-center">
+                <div className="w-full mx-3 md:w-[30dvw] bg-[#3E65B3] gap-4 text-white px-3 py-5 rounded-md flex flex-col items-center">
                     <Info />
                     <Tech />
 

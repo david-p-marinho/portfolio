@@ -49,7 +49,7 @@ export default function Home() {
                 <div className="w-full h-10 rounded-t-lg md:hidden bg-[#F7F4ED] absolute -top-2" />
                 <motion.div
                     style={{ clipPath: isMounted ? clipPath: undefined }}
-                    className="sticky top-0 md:h-screen w-full flex items-center justify-between md:px-24 overflow-hidden bg-[#F7F4ED] text-gray-800"
+                    className="sticky top-0 md:h-screen w-full flex items-center justify-between overflow-hidden bg-[#F7F4ED] text-gray-800"
                 >
                     <Projects />
                 </motion.div>

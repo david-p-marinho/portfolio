@@ -3,10 +3,10 @@ import Link from "next/link";
 import { RiGithubLine, RiLinkedinBoxLine, RiUserLine } from "react-icons/ri";
 
 export default function Hero() {
-    const btnStyle = "bg-[#189CC9] shadow-md px-3 py-2 rounded-full flex justify-center transition-transform duration-200 items-center text-white mx-5 scale-75 group hover:shadow-xl hover:scale-105 active:scale-95 md:scale-100 "
+    const btnStyle = "w-[130px] h-[45px] bg-[#189CC9] shadow-md px-3 rounded-full flex justify-center gap-2 transition-transform duration-200 items-center text-white group hover:shadow-xl hover:scale-105 active:scale-95"
     
     return (
-        <div className=" md:h-screen w-full bg-gradient-to-b from-[#273070] to-[#20345C] flex justify-center items-center">
+        <div className=" md:h-screen w-full bg-gradient-to-b from-[#253267] to-[#182042] flex justify-center items-center">
             <div className="flex flex-col md:flex-row-reverse items-center justify-center my-10">
                 <div className="relative md:w-[250px] md:h-[250px] w-[150px] h-[150px]">
                     <Image fill className="rounded-full object-cover" src={"/portrait.jpg"} alt={""}/>
@@ -19,18 +19,18 @@ export default function Hero() {
                         <p className="text-md md:text-lg text-md tracking-wider mb-10 font-bold">Desenvolvedor Web | Mobile</p>
                     </div>
 
-                    <div className="flex justify-center items-center">
+                    <div className="flex justify-center items-center gap-4">
                         <Link href={""}>
                             <div className={btnStyle}>
-                                <RiGithubLine className="h-[30px] w-[30px]" />
-                                <p className="text-[18px] font-bold">GitHub</p>
+                                <RiGithubLine className="h-[26px] w-[26px]" />
+                                <p className="text-[16px] font-bold">GitHub</p>
                             </div>
                         </Link>
 
                         <Link href={""}>
                             <div className={btnStyle}>
-                                <RiLinkedinBoxLine className="h-[30px] w-[30px]" />
-                                <p className="text-[18px] font-bold">LinkedIn</p>
+                                <RiLinkedinBoxLine className="h-[26px] w-[26px]" />
+                                <p className="text-[16px] font-bold">LinkedIn</p>
                             </div>
                         </Link>
                     </div>

@@ -53,11 +53,11 @@ export default function Projects() {
     const activeProject = projects[currentIndex];
 
     return (
-        <div onWheel={handleWheel} className="md:pr-8 flex flex-col w-full items-center h-full py-10 select-none">
-            <span className="text-[#189CC9] font-mono text-sm block font-bold mb-20">01 / PORTFÓLIO</span>
+        <div onWheel={handleWheel} className="flex flex-col w-[100dvw] gap-4 px-5 items-center h-full py-10 select-none">
+            <span className="text-[#189CC9] font-mono text-sm block font-bold">01 / PORTFÓLIO</span>
             {activeProject && (
                 <>
-                    <div className="hidden md:block w-full h-screen">
+                    <div className="hidden md:block w-full">
                         <ProjectDesktop activeProject={activeProject} techList={techList} />
                     </div>
 

@@ -7,7 +7,7 @@ import ActionBtn from "../component/actionBtn";
 
 export default function ProjectDesktop({ activeProject, techList }: { activeProject: ProjectProps, techList: TechProps[] }) {
     return (
-        <div className="flex flex-col items-center w-full h-full justify-between">
+        <div className="flex flex-col items-center w-full justify-between">
             <div className="flex justify-between w-full">
                 <div className="w-1/2">
                     <AnimatePresence mode="popLayout">

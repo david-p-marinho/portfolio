@@ -16,9 +16,9 @@ export default function Tech() {
     }, [])
 
     return(
-        <div className="w-full h-full flex flex-col items-center">
+        <div className="w-full flex flex-col items-center">
             {dataList && (
-                <div className="w-full max-w-[800px] flex flex-col items-center bg-[#3E65B3] px-1 py-10 rounded-md">
+                <div className="w-full max-w-[800px] flex flex-col items-center bg-[#3E65B3] px-1 rounded-md">
                     <h2 className="text-xl font-bold leading-tight text-white mb-10">Ferramentas que conheço</h2>
                     <div className=" w-full grid grid-cols-5 justify-items-center gap-4 gap-y-10">
                         {dataList.map((item, index) => (
