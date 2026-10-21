@@ -27,7 +27,7 @@
         "id": 1,
         "title": "Swarm79",
         "resume": "O website da equipe de pesquisa e competição de drone, Swarm79",
-        "info": "O website da equipe de pesquisa e competição de drone, Swarm79 foi idealizado para ser um site com uma interface moderna, que refletisse a estética da equipe. Eu fiquei na área de desenvolvimento do site, mas também ajudei a equipe de design e prototipação \n \nUm dos principais focos foi a facilidade de adicionar e editar informações. A ideia era que qualquer integrante da equipe pudesse editar facilmente os textos sem precisar de muito conhecimento em programação. Para isso, foi necessário componentizar várias áreas do site e tornar-los automatizados para se adaptarem a mudanças. \n \nO site foi desenvolvido pela equipe usando o ReactJS, NextJS e tailwind para a estilização",
+        "info": "O website da equipe de pesquisa e competição de drone, Swarm79 foi idealizado para ser um site com uma interface moderna, que refletisse a estética da equipe. Eu fiquei na área de desenvolvimento do site, mas também ajudei a equipe de design e prototipação \n \nUm dos principais focos foi a facilidade de adicionar e editar informações. A ideia era que qualquer integrante da equipe pudesse editar facilmente os textos sem precisar de muito conhecimento em programação. Para isso, foi necessário componentizar várias áreas do site e tornar-los automatizados para se adaptarem a mudanças.",
         "imgs": ["/projeto2-1.webp", "/projeto2-2.webp"],
         "tags": [
             6, 4, 3
