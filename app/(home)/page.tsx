@@ -1,27 +1,24 @@
 'use client'
 
-import { motion, useScroll, useSpring, useTransform } from "framer-motion";
-import { useEffect, useRef, useState } from "react";
 import Hero from "./sections/hero/hero";
 import Projects from "./sections/projects/projects";
 import About from "./sections/about/about";
 
 export default function Home() {
     return (
-        <main className="bg-[#29215a]">
-            <section className="h-dvh ">
+        <main className="relative bg-[#29215a]">
+            <div className="sticky top-0 h-screen w-full overflow-hidden z-0">
                 <Hero />
-            </section>
-
-            <div className="rounded-t-3xl bg-white">
-                <section>
-                    <Projects/>
-                </section>
-                <section >
-                    <About/>
-                </section>
             </div>
 
+            <div className="relative z-10 rounded-t-[2.5rem] bg-white shadow-[0_-20px_50px_rgba(0,0,0,0.3)]">
+                <section>
+                    <Projects />
+                </section>
+                <section>
+                    <About />
+                </section>
+            </div>
         </main>
     );
 }

@@ -1,104 +1,46 @@
-"use client";
-
-import { motion, useScroll, useTransform, useSpring } from "framer-motion";
-import { useRef } from "react";
-
-export default function Home() {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const section2Ref = useRef<HTMLDivElement>(null);
-
-  // Monitora a rolagem da Seção 2
-  const { scrollYProgress } = useScroll({
-    container: containerRef,
-    target: section2Ref,
-    offset: ["start end", "end end"],
-  });
-
-  const smoothProgress = useSpring(scrollYProgress, {
-    stiffness: 60,
-    damping: 20,
-    restDelta: 0.001,
-  });
-
-  // 1. ANIMAÇÃO CIRCULAR
-  // O fundo roxo abre durante a aproximação/encaixe do Snap (0% a 30%)
-  const clipRadius = useTransform(smoothProgress, [0, 0.3], ["0%", "150%"]);
-  const clipPath = useTransform(
-    clipRadius,
-    (r) => `circle(${r} at 50% 100%)`
-  );
-
-  // 2. ANIMAÇÃO DA GALERIA
-  // Começa do 0 (sem atraso na lógica) até a rolagem completa do bloco
-  const yTransform = useTransform(smoothProgress, [0, 1], ["0%", "-80%"]);
-
+export default function ParallaxSection() {
   return (
-    <main
-      ref={containerRef}
-      className="h-screen w-full overflow-y-scroll snap-y snap-mandatory bg-zinc-950 text-white"
-    >
-      {/* SEÇÃO 1 */}
-      <section className="h-screen w-full snap-start flex flex-col items-center justify-center bg-zinc-950 p-8 relative">
-        <h1 className="text-5xl font-bold">Primeira Seção</h1>
-        <p className="mt-4 text-zinc-400">
-          Role para baixo para testar com o offset compensado.
-        </p>
+    <div className="w-full bg-neutral-950 text-white font-sans">
+      {/* 1. Primeira Seção (Fica fixa / Sticky enquanto rola) */}
+      <section className="sticky top-0 h-screen w-full flex flex-col justify-center items-center bg-gradient-to-br from-indigo-900 to-slate-900 px-6">
+        <span className="text-indigo-400 text-sm font-semibold tracking-widest uppercase mb-2">
+          Efeito Paralaxe
+        </span>
+        <h1 className="text-4xl md:text-7xl font-bold text-center tracking-tight max-w-4xl">
+          Role para baixo para revelar a próxima seção
+        </h1>
+        <div className="mt-8 animate-bounce text-gray-400 text-sm flex flex-col items-center gap-2">
+          <span>Rolar</span>
+          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+          </svg>
+        </div>
       </section>
 
-      {/* SEÇÃO 2 (300vh com Snap) */}
-      <div ref={section2Ref} className="h-[300vh] w-full snap-start relative">
-        {/* Elemento Sticky com a cor #4f39f6 */}
-        <motion.div
-          style={{ clipPath }}
-          className="sticky top-0 h-screen w-full flex items-center justify-between px-12 md:px-24 overflow-hidden bg-[#4f39f6]"
-        >
-          {/* Lado Esquerdo: Texto Fixo */}
-          <div className="w-1/2 pr-8">
-            <span className="text-indigo-200 font-mono text-sm mb-2 block">
-              02 / COLEÇÃO
-            </span>
-            <h2 className="text-5xl font-bold leading-tight text-white">
-              Galeria Interativa
-            </h2>
-            <p className="mt-4 text-indigo-100 max-w-md">
-              O espaço em branco compensou a travada do Snap. O Item 01 está exatamente onde deveria!
-            </p>
-          </div>
+      {/* 2. Segunda Seção (Desliza POR CIMA da primeira) */}
+      <section className="relative z-10 min-h-screen w-full bg-emerald-950 text-emerald-100 flex flex-col justify-center items-center px-6 shadow-[0_-20px_50px_rgba(0,0,0,0.8)] rounded-t-[2.5rem] border-t border-emerald-500/20">
+        <div className="max-w-3xl text-center space-y-6">
+          <span className="text-emerald-400 text-sm font-semibold tracking-widest uppercase">
+            Sua nova seção
+          </span>
+          <h2 className="text-3xl md:text-6xl font-bold text-white tracking-tight">
+            Efeito Cortina com Sombra e Borda Arredondada
+          </h2>
+          <p className="text-emerald-200/80 text-lg md:text-xl leading-relaxed">
+            Esta seção sobe e cobre a seção anterior. Usando <code className="bg-emerald-900/60 px-2 py-1 rounded text-emerald-300">sticky top-0</code> na primeira seção e <code className="bg-emerald-900/60 px-2 py-1 rounded text-emerald-300">relative z-10</code> nesta, conseguimos o efeito nativo de paralaxe sem JavaScript!
+          </p>
+        </div>
+      </section>
 
-          {/* Lado Direito: Galeria com Offset no topo */}
-          <div className="w-1/2 h-[500px] overflow-hidden relative rounded-2xl border border-white/20 bg-black/20 p-4 backdrop-blur-sm">
-            <motion.div
-              style={{ y: yTransform }}
-              /* pt-[350px] cria o 'vácuo' no topo para compensar a rolagem inicial */
-              className="flex flex-col gap-6 pt-[350px]"
-            >
-              <div className="h-64 w-full rounded-xl bg-gradient-to-br from-purple-600 to-indigo-600 flex items-center justify-center text-2xl font-bold shadow-lg shrink-0">
-                Item 01
-              </div>
-              <div className="h-64 w-full rounded-xl bg-gradient-to-br from-blue-600 to-cyan-600 flex items-center justify-center text-2xl font-bold shadow-lg shrink-0">
-                Item 02
-              </div>
-              <div className="h-64 w-full rounded-xl bg-gradient-to-br from-emerald-600 to-teal-600 flex items-center justify-center text-2xl font-bold shadow-lg shrink-0">
-                Item 03
-              </div>
-              <div className="h-64 w-full rounded-xl bg-gradient-to-br from-rose-600 to-orange-600 flex items-center justify-center text-2xl font-bold shadow-lg shrink-0">
-                Item 04
-              </div>
-              <div className="h-64 w-full rounded-xl bg-gradient-to-br from-amber-500 to-pink-600 flex items-center justify-center text-2xl font-bold shadow-lg shrink-0">
-                Item 05
-              </div>
-            </motion.div>
-          </div>
-        </motion.div>
-      </div>
-
-      {/* SEÇÃO 3 */}
-      <section className="h-screen w-full snap-start flex flex-col items-center justify-center bg-zinc-950 p-8">
-        <h2 className="text-5xl font-bold">Terceira Seção</h2>
-        <p className="mt-4 text-zinc-400">
-          Trava de snap mantida normalmente ao chegar aqui.
+      {/* 3. Terceira Seção (Mais uma camada para continuar a experiência) */}
+      <section className="relative z-20 min-h-screen w-full bg-slate-900 text-white flex flex-col justify-center items-center px-6 shadow-[0_-20px_50px_rgba(0,0,0,0.9)] rounded-t-[2.5rem] border-t border-slate-700">
+        <h3 className="text-3xl md:text-5xl font-bold mb-4">
+          Próximo Bloco
+        </h3>
+        <p className="text-gray-400 max-w-xl text-center">
+          Você pode empilhar múltiplos blocos ajustando o nível do <code className="text-indigo-400">z-index</code> para cada um deles.
         </p>
       </section>
-    </main>
+    </div>
   );
 }

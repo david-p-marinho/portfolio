@@ -9,7 +9,7 @@ export default function Hero() {
 
     return (
         <FallingPixels className="h-screen flex justify-center items-center">
-                <LiquidGlassCard className="flex flex-col md:flex-row-reverse items-center justify-center ">
+                <LiquidGlassCard className="flex flex-col md:flex-row-reverse items-center justify-center px-5 py-5">
                     <div className="relative md:w-[250px] md:h-[250px] w-[150px] h-[150px]">
                         <Image fill className="rounded-full object-cover" src={"/portrait.jpg"} alt={""} />
                     </div>
