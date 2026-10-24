@@ -15,13 +15,6 @@ export default function ProjectDesktop({ activeProject, techList }: { activeProj
                         <motion.div key={activeProject.id} initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -10 }} transition={{ duration: 0.2 }}>
                             <div className="flex items-center gap-4">
                                 <h2 className="text-5xl font-bold leading-tight text-[#189CC9]">{activeProject.title}</h2>
-                                {
-                                    activeProject.links.find((link) => link.iconKey == 'github') && (
-                                        <div className="w-[30px] h-[30px] rounded-full bg-[#189CC9] flex justify-center items-center shadow-md transition-all hover:scale-110 hover:shadow-lg hover:cursor-pointer">
-                                            <RiGithubLine className="w-[24px] h-[24px] text-white" />
-                                        </div>
-                                    )
-                                }
                             </div>
                             <p className="mt-4 text-gray-600 max-w-lg text-md whitespace-pre-line">{activeProject.info}</p>
 
@@ -54,14 +47,9 @@ export default function ProjectDesktop({ activeProject, techList }: { activeProj
 
             <div className="flex gap-8 mb-10">
                 {
-                    activeProject.links.find((link) => link.iconKey == 'web') && (
-                        <div className="py-2 w-[130px] h-[30px] rounded-full bg-[#189CC9] flex items-center shadow-md transition-all group hover:scale-110 hover:shadow-lg hover:cursor-pointer">
-                            <div className="w-[40px] h-[40px] rounded-full bg-[#189CC9] flex justify-center items-center group-hover:animate-spin">
-                                <RiGlobalLine className="w-[24px] h-[24px] text-white" />
-                            </div>
-                            <p className="text-white font-bold">Visitar site</p>
-                        </div>
-                    )
+                    activeProject.links.map((item) => (
+                        <ActionBtn key={item.id} link={item.link} name={item.label} iconKey={item.iconKey} />
+                    ))
                 }
             </div>
         </div>

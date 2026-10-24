@@ -3,6 +3,8 @@
 import Hero from "./sections/hero/hero";
 import Projects from "./sections/projects/projects";
 import About from "./sections/about/about";
+import Works from "./sections/works/works";
+import Tech from "./sections/tech/tech";
 
 export default function Home() {
     return (
@@ -11,13 +13,11 @@ export default function Home() {
                 <Hero />
             </div>
 
-            <div className="relative z-10 rounded-t-[2.5rem] bg-white shadow-[0_-20px_50px_rgba(0,0,0,0.3)]">
-                <section>
-                    <Projects />
-                </section>
-                <section>
-                    <About />
-                </section>
+            <div className="relative z-10 rounded-t-[2.5rem] bg-[#F5EBDD] shadow-[0_-20px_50px_rgba(0,0,0,0.3)]">
+                <Projects />
+                <Works />
+                <Tech />
+                <About />
             </div>
         </main>
     );

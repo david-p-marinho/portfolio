@@ -11,13 +11,13 @@
         "links": [
             {
                 "id": 0,
-                "label": "Abrir repositorio",
+                "label": "Abrir github",
                 "link": "https://github.com/david-p-marinho/perclima-react" ,
                 "iconKey": "github"
             },
             {
                 "id": 1,
-                "label": "Abrir site",
+                "label": "Abrir Site",
                 "link": "https://github.com/david-p-marinho/perclima-react",
                 "iconKey": "web"
             }
@@ -35,9 +35,15 @@
         "links": [
             {
                 "id": 0,
-                "label": "Abrir repositorio",
+                "label": "Abrir github",
                 "link": "https://github.com/Ojoca01/swarm_teste",
                 "iconKey": "github"
+            },
+            {
+                "id": 1,
+                "label": "Abrir Site",
+                "link": "https://swarm-indol.vercel.app/",
+                "iconKey": "web"
             }
         ],
         "status": 0
@@ -54,7 +60,7 @@
         "links": [
             {
                 "id": 0,
-                "label": "Abrir repositorio",
+                "label": "Abrir github",
                 "link": "https://github.com/david-p-marinho/perclima-react",
                 "iconKey": "github"
             },
