@@ -13,7 +13,6 @@ export default function About() {
                 </div>
                 <div className="w-full mx-3 md:w-[30dvw] bg-[#3E65B3] gap-4 text-white px-3 py-5 rounded-md flex flex-col items-center">
                     <Info />
-                    <Tech />
 
                     <a href={"https://drive.google.com/uc?export=download&id=1X4PgrlRP-4pv-r0URroF5L2mj43XlZsd"}>
                         <div className="bg-[#189CC9] w-[200px] py-5 flex justify-center items-center rounded-full shadow-md transision-all duration-300 hover:shadow-xl hover:scale-110 hover:bg-[#2BB4E3] hover:cursor-pointer">

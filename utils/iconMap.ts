@@ -1,5 +1,5 @@
 import { ElementType } from "react";
-import { RiJavascriptLine, RiNextjsLine, RiReactjsLine, RiHtml5Line, RiCss3Line, RiTailwindCssLine, RiFigmaLine, RiReactjsFill, RiFirebaseLine, RiAngularjsLine } from "react-icons/ri";
+import { RiJavascriptLine, RiNextjsLine, RiReactjsLine, RiHtml5Line, RiCss3Line, RiTailwindCssLine, RiFigmaLine, RiReactjsFill, RiFirebaseLine, RiAngularjsLine, RiSmartphoneFill, RiGlobalFill, RiPencilRuler2Fill } from "react-icons/ri";
 
 
 export const iconMap: Record<string, ElementType> = {
@@ -12,5 +12,8 @@ export const iconMap: Record<string, ElementType> = {
     figma: RiFigmaLine,
     reactNative: RiReactjsFill,
     firebase: RiFirebaseLine,
-    angular: RiAngularjsLine 
+    angular: RiAngularjsLine,
+    web: RiGlobalFill,
+    mobile: RiSmartphoneFill,
+    design: RiPencilRuler2Fill 
 }

@@ -1,0 +1,17 @@
+[
+    {
+        "title": "Desenvolvimento Web",
+        "icon": "web",
+        "resume": "Lorem ipsum, dolor sit amet consectetur adipisicing elit."
+    },
+    {
+        "title": "Desenvolvimento Mobile",
+        "icon": "mobile",
+        "resume": "Lorem ipsum, dolor sit amet consectetur adipisicing elit."
+    },
+    {
+        "title": "Designer UX/UI",
+        "icon": "design",
+        "resume": "Lorem ipsum, dolor sit amet consectetur adipisicing elit."
+    }
+]
