@@ -1,4 +1,3 @@
-import Tech from "./component/tech";
 import Image from "next/image";
 import Info from "./component/info";
 
