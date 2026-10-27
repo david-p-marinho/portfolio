@@ -30,4 +30,19 @@ body {
     font-family: var(--font-pixel);
     @apply text-[#189CC9] text-[12px] block font-bold
   }
+  .glass-effect {
+    @apply relative 
+    overflow-hidden 
+    rounded-3xl 
+    p-8 
+    bg-white/10 
+    dark:bg-black/25 
+    backdrop-blur-md 
+    border 
+    border-white/20 
+    dark:border-white/10 
+    shadow-[0_8px_32px_0_rgba(0,0,0,0.37)] 
+    transition-all duration-500 ease-out 
+    hover:shadow-[0_12px_40px_0_rgba(0,0,0,0.45)] 
+  }
 }
