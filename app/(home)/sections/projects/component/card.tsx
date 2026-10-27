@@ -8,7 +8,7 @@ export default function Card({ link }: { link: string }) {
                 src={link} 
                 alt="Projeto"
                 fill
-                sizes="100vw"
+                sizes="50vw"
                 priority
             />
         </div>

@@ -16,7 +16,7 @@ export default function ProjectDesktop({ activeProject, techList }: { activeProj
                             <div className="flex items-center gap-4">
                                 <h2 className="text-5xl font-bold leading-tight text-[#189CC9]">{activeProject.title}</h2>
                             </div>
-                            <p className="mt-4 text-gray-600 max-w-lg text-md whitespace-pre-line">{activeProject.info}</p>
+                            <p className="mt-4 text-white max-w-lg text-md whitespace-pre-line">{activeProject.info}</p>
 
                             {
                                 techList && (

@@ -5,20 +5,24 @@ import Projects from "./sections/projects/projects";
 import About from "./sections/about/about";
 import Works from "./sections/works/works";
 import Tech from "./sections/tech/tech";
+import StarField from "@/components/starField";
 
 export default function Home() {
     return (
-        <main className="relative bg-[#29215a]">
-            <div className="sticky top-0 h-screen w-full overflow-hidden z-0">
-                <Hero />
+        <StarField className="relative bg-[#29215a]">
+            <div className="">
+                <Hero/>
             </div>
 
-            <div className="relative z-10 rounded-t-[2.5rem] bg-[#F5EBDD] shadow-[0_-20px_50px_rgba(0,0,0,0.3)]">
-                <Projects />
-                <Works />
-                <Tech />
-                <About />
+            <div className=" ">
+   
+                    <Projects />
+                    <Works />
+                    <Tech />
+                    <About />
+
+
             </div>
-        </main>
+        </StarField>
     );
 }

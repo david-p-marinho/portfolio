@@ -5,7 +5,7 @@ import Info from "./component/info";
 export default function About() {
     return (
         <div className="w-full h-screen py-10 flex flex-col items-center gap-4">
-            <span className="text-[#189CC9] font-mono text-sm block font-bold">03 / SOBRE MIM</span>
+            <h2 className="subtitle">04 / SOBRE MIM</h2>
             <div className="flex w-full items-center justify-center md:justify-evenly">
                 <div className="md:flex items-center justify-center hidden">
                     <Image className="rounded-md relative -right-25 -top-25" width={240} height={365} src={"/about1.png"} alt={""} />

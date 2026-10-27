@@ -19,12 +19,12 @@ export default function Works() {
 
     return (
         <div className="w-full h-screen py-10 flex flex-col items-center gap-4">
-            <span className="text-[#189CC9] font-mono text-sm block font-bold">02 / Areas de Trabalho</span>
+            <h2 className="subtitle">02 / Areas de Trabalho</h2>
 
             <div className="flex gap-4">
                 {
-                    workList && workList.map((work) => (
-                        <Card title={work.title} icon={work.icon} resume={work.resume} />
+                    workList && workList.map((work, index) => (
+                        <Card key={index} title={work.title} icon={work.icon} resume={work.resume} />
                     ))
                 }
             </div>

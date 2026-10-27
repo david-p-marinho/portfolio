@@ -4,7 +4,7 @@ import TechList from "./component/techList";
 export default function Tech() {
     return (
         <div className="w-full h-screen py-10 flex flex-col items-center gap-4">
-            <span className="text-[#189CC9] font-mono text-sm block font-bold">03 / Tecnologias que uso</span>
+            <h2 className="subtitle">03 / Tecnologias que uso</h2>
 
             <TechList/>
         </div>

@@ -35,7 +35,7 @@ export default function Projects() {
 
     return (
         <div className="flex flex-col w-full gap-4 px-5 items-center h-fit py-10 relative">
-            <span className="text-[#189CC9] font-mono text-sm block font-bold">01 / PORTFÓLIO</span>
+            <h2 className="subtitle">01 / PORTFÓLIO</h2>
             <ul className="w-full">
                 {
                     activeProject != null && (
